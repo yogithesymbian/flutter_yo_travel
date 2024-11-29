@@ -74,9 +74,9 @@ class FeedScreen extends StatelessWidget {
                       ],
                     ),
                     const Spacer(),
-                    const IconButton(
-                      // onPressed: () {},
-                      icon: Icon(
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
                         Icons.more_horiz,
                         color: Colors.white,
                       ),
@@ -99,7 +99,7 @@ class FeedScreen extends StatelessWidget {
                 Row(
                   children: [
                     TextButton.icon(
-                      // onPressed: () {},
+                      onPressed: () {},
                       style: TextButton.styleFrom(
                         foregroundColor: Colors.white,
                         shape: const StadiumBorder(),
@@ -108,7 +108,7 @@ class FeedScreen extends StatelessWidget {
                       label: Text(place.likes.toString()),
                     ),
                     TextButton.icon(
-                      // onPressed: () {},
+                      onPressed: () {},
                       style: TextButton.styleFrom(
                         foregroundColor: Colors.white,
                         shape: const StadiumBorder(),
