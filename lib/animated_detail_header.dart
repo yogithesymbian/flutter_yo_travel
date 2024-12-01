@@ -1,4 +1,7 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_yo_travel/place_image_page_view.dart';
 import 'package:flutter_yo_travel/place_model.dart';
 
 class AnimatedDetailHeader extends StatelessWidget {
@@ -15,57 +18,33 @@ class AnimatedDetailHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final topPadding = MediaQuery.of(context).padding.top;
     final imagesUrl = place.imagesUrl;
-    print(bottomPercent);
-    return Column(
+    return Stack(
+      fit: StackFit.expand,
       children: [
-        Expanded(
-          child: PageView.builder(
-              itemCount: place.imagesUrl.length,
-              physics: const BouncingScrollPhysics(),
-              controller: PageController(viewportFraction: .9),
-              itemBuilder: (context, index) {
-                final imageUrl = place.imagesUrl[index];
-                return Container(
-                  margin: const EdgeInsets.only(right: 10),
-                  decoration: BoxDecoration(
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Colors.black12,
-                        blurRadius: 10,
-                      )
-                    ],
-                    borderRadius: BorderRadius.circular(20),
-                    image: DecorationImage(
-                      image: NetworkImage(imageUrl),
-                      fit: BoxFit.cover,
-                      colorFilter: const ColorFilter.mode(
-                        Colors.black26,
-                        BlendMode.darken,
-                      ),
-                    ),
-                  ),
-                );
-              }),
-        ),
-        const SizedBox(
-          height: 10,
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: List.generate(
-            imagesUrl.length,
-            (index) => Container(
-              color: Colors.black12,
-              margin: const EdgeInsets.symmetric(horizontal: 3),
-              height: 3,
-              width: 10,
-            ),
+        Positioned.fill(
+          top: (20 + topPadding) * (1 - bottomPercent),
+          bottom: 160 * (1 - bottomPercent),
+          child: Transform.scale(
+            scale: lerpDouble(1, 1.3, bottomPercent),
+            child: PlaceImagePageView(place: place, imagesUrl: imagesUrl),
           ),
         ),
-        const SizedBox(
-          height: 10,
+        Positioned.fill(
+          top: null,
+          child: Container(
+            height: 140,
+            color: Colors.blue.shade400,
+          ),
         ),
+        Positioned.fill(
+          top: null,
+          child: Container(
+            height: 70,
+            color: Colors.white,
+          ),
+        )
       ],
     );
   }
