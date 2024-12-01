@@ -32,7 +32,7 @@ class GradientStatusTag extends StatelessWidget {
       ),
       child: Text(
         text,
-        style: context.headline6.copyWith(),
+        style: context.bodyText1.copyWith(),
       ),
     );
   }

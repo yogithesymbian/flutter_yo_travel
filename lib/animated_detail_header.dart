@@ -45,7 +45,45 @@ class AnimatedDetailHeader extends StatelessWidget {
           top: null,
           child: Container(
             height: 70,
-            color: Colors.white,
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            decoration: const BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.vertical(top: Radius.circular(30))),
+            child: Row(
+              children: [
+                CircleAvatar(
+                  backgroundImage: NetworkImage(place.user.urlPhoto),
+                ),
+                const SizedBox(
+                  width: 10,
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      place.user.name,
+                      style: context.bodyText1.copyWith(
+                        color: Colors.white,
+                      ),
+                    ),
+                    Text(
+                      'yesterday at 9.10 pm.',
+                      style: context.bodyText1.copyWith(
+                        color: Colors.white70,
+                      ),
+                    ),
+                  ],
+                ),
+                const Spacer(),
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.more_horiz,
+                    color: Colors.white,
+                  ),
+                )
+              ],
+            ),
           ),
         )
       ],

@@ -26,9 +26,9 @@ class TravelPlace {
       name: "Riviera Maya",
       user: TravelUser.alex,
       imagesUrl: [
-        'https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0',
-        'https://images.unsplash.com/photo-1495567720989-cebdbdd97913',
-        'https://images.unsplash.com/photo-1543486958-d783bfbf9926',
+        'https://images.unsplash.com/photo-1507525428034-b723cf961d3e', // Riviera Maya beach
+        'https://images.unsplash.com/photo-1545287078-7bc8b3b3f54b', // Tropical view
+        'https://images.unsplash.com/photo-1581579199568-7f4a898ddfc8', // Tropical water
       ],
       id: "1",
       description: 'A beautiful tropical getaway.',
@@ -41,9 +41,9 @@ class TravelPlace {
       name: "Eiffel Tower",
       user: TravelUser.lili,
       imagesUrl: [
-        'https://images.unsplash.com/photo-1566864393549-d7f688c4f7e5',
-        'https://images.unsplash.com/photo-1528350996546-df4f22daac3a',
-        'https://images.unsplash.com/photo-1543486958-d783bfbf9926',
+        'https://images.unsplash.com/photo-1542332213-7c99150a0f8d', // Eiffel Tower at sunset
+        'https://images.unsplash.com/photo-1512777576245-51c8e22d7d1c', // Eiffel Tower, close-up
+        'https://images.unsplash.com/photo-1572433563906-c5f5a5fcf2f1', // Eiffel Tower from below
       ],
       id: "2",
       description: 'The iconic Eiffel Tower in Paris.',
@@ -56,9 +56,9 @@ class TravelPlace {
       name: "Santorini",
       user: TravelUser.luna,
       imagesUrl: [
-        'https://images.unsplash.com/photo-1526778548025-fa2f459cd5c4',
-        'https://images.unsplash.com/photo-1588528895324-8a74d413e64b',
-        'https://images.unsplash.com/photo-1562680208-ef90c93c6b36',
+        'https://images.unsplash.com/photo-1504712598893-24159a89200e', // Santorini iconic view
+        'https://images.unsplash.com/photo-1573496787183-26697ad1c1aa', // Santorini domes
+        'https://images.unsplash.com/photo-1606788075768-92f930fb4e77', // Santorini sunset
       ],
       id: "3",
       description: 'Stunning sunsets in Santorini.',
@@ -71,9 +71,9 @@ class TravelPlace {
       name: "Great Wall of China",
       user: TravelUser.javier,
       imagesUrl: [
-        'https://images.unsplash.com/photo-1576086213369-97a306d3655a',
-        'https://images.unsplash.com/photo-1543340903-d531d79b23e6',
-        'https://images.unsplash.com/photo-1603415526960-f8f9d5f42b35',
+        'https://images.unsplash.com/photo-1520848315518-b991dd16a6cf', // Great Wall aerial
+        'https://images.unsplash.com/photo-1576432537335-d0383e14dd36', // Great Wall in fog
+        'https://images.unsplash.com/photo-1543340903-d531d79b23e6', // Great Wall with mountains
       ],
       id: "4",
       description: 'Walk along the ancient Great Wall.',
@@ -86,9 +86,9 @@ class TravelPlace {
       name: "Grand Canyon",
       user: TravelUser.mario,
       imagesUrl: [
-        'https://images.unsplash.com/photo-1587502537745-bc6bf7f73484',
-        'https://images.unsplash.com/photo-1587502538162-e23f05c50431',
-        'https://images.unsplash.com/photo-1587502538794-d0a5d705024b',
+        'https://images.unsplash.com/photo-1535916707207-78e04d8ff0b5', // Grand Canyon landscape
+        'https://images.unsplash.com/photo-1573511705763-168e967216f8', // Grand Canyon with river
+        'https://images.unsplash.com/photo-1572451478303-d7cf5fbe1467', // Grand Canyon cliff
       ],
       id: "5",
       description: 'Breathtaking views at the Grand Canyon.',
@@ -101,9 +101,9 @@ class TravelPlace {
       name: "Maldives",
       user: TravelUser.lili,
       imagesUrl: [
-        'https://images.unsplash.com/photo-1582152620502-72f63895a7d3',
-        'https://images.unsplash.com/photo-1570648907725-38280ad5d32e',
-        'https://images.unsplash.com/photo-1570647171199-20255e842b19',
+        'https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0', // Maldives water villa
+        'https://images.unsplash.com/photo-1573199902343-ef6f7dc9b037', // Maldives beach
+        'https://images.unsplash.com/photo-1522098543979-ffc7cbb53091', // Maldives aerial view
       ],
       id: "6",
       description: 'Crystal clear waters and luxury resorts.',
@@ -111,66 +111,6 @@ class TravelPlace {
       statusTag: StatusTag.popular,
       shared: 310,
       likes: 640,
-    ),
-    TravelPlace(
-      name: "Mount Fuji",
-      user: TravelUser.alex,
-      imagesUrl: [
-        'https://images.unsplash.com/photo-1602127882470-dab01c058032',
-        'https://images.unsplash.com/photo-1527866959252-deab85ef74c6',
-        'https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0',
-      ],
-      id: "7",
-      description: 'The majestic Mount Fuji in Japan.',
-      locationDesc: 'Honshu, Japan',
-      statusTag: StatusTag.popular,
-      shared: 190,
-      likes: 430,
-    ),
-    TravelPlace(
-      name: "Pyramids of Giza",
-      user: TravelUser.javier,
-      imagesUrl: [
-        'https://images.unsplash.com/photo-1548786811-49c00dc97d2b',
-        'https://images.unsplash.com/photo-1574290194077-d8ebda8150aa',
-        'https://images.unsplash.com/photo-1603415526960-f8f9d5f42b35',
-      ],
-      id: "8",
-      description: 'Discover ancient wonders in Egypt.',
-      locationDesc: 'Cairo, Egypt',
-      statusTag: StatusTag.event,
-      shared: 270,
-      likes: 520,
-    ),
-    TravelPlace(
-      name: "Banff National Park",
-      user: TravelUser.luna,
-      imagesUrl: [
-        'https://images.unsplash.com/photo-1509631179644-62c06915d3b3',
-        'https://images.unsplash.com/photo-1519082484463-3fb85dbeba73',
-        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d',
-      ],
-      id: "9",
-      description: 'Snow-capped mountains and serene lakes.',
-      locationDesc: 'Alberta, Canada',
-      statusTag: StatusTag.popular,
-      shared: 360,
-      likes: 700,
-    ),
-    TravelPlace(
-      name: "Sydney Opera House",
-      user: TravelUser.mario,
-      imagesUrl: [
-        'https://images.unsplash.com/photo-1508963493744-76fce69379c0',
-        'https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2',
-        'https://images.unsplash.com/photo-1517841905240-472988babdf9',
-      ],
-      id: "10",
-      description: 'Experience the vibrant culture of Sydney.',
-      locationDesc: 'Sydney, Australia',
-      statusTag: StatusTag.event,
-      shared: 400,
-      likes: 820,
     ),
   ];
 }

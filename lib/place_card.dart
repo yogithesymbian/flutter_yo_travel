@@ -70,7 +70,7 @@ class PlaceCard extends StatelessWidget {
             const Spacer(),
             Text(
               place.name,
-              style: context.headline2,
+              style: context.headline5,
             ),
             const SizedBox(
               height: 10,
