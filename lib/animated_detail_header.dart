@@ -39,64 +39,7 @@ class AnimatedDetailHeader extends StatelessWidget {
         ),
         Positioned.fill(
           top: null,
-          child: Container(
-            height: 140,
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            decoration: BoxDecoration(
-              color: Colors.blue.shade400,
-              borderRadius: const BorderRadius.vertical(
-                top: Radius.circular(30),
-              ),
-            ),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                TextButton.icon(
-                  onPressed: () {},
-                  style: TextButton.styleFrom(
-                    foregroundColor: Colors.black,
-                    textStyle: context.subtitle1,
-                    shape: const StadiumBorder(),
-                  ),
-                  icon: const Icon(
-                    CupertinoIcons.heart,
-                    size: 26,
-                  ),
-                  label: Text(place.likes.toString()),
-                ),
-                TextButton.icon(
-                  onPressed: () {},
-                  style: TextButton.styleFrom(
-                    foregroundColor: Colors.black,
-                    textStyle: context.subtitle1,
-                    shape: const StadiumBorder(),
-                  ),
-                  icon: const Icon(
-                    CupertinoIcons.reply,
-                    size: 26,
-                  ),
-                  label: Text(place.shared.toString()),
-                ),
-                const Spacer(),
-                TextButton.icon(
-                  onPressed: () {},
-                  style: TextButton.styleFrom(
-                    foregroundColor: Colors.blue.shade600,
-                    backgroundColor: Colors.blue.shade100,
-                    textStyle: context.subtitle1,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15.0),
-                    ),
-                  ),
-                  icon: const Icon(
-                    Icons.check_circle_outline,
-                    size: 26,
-                  ),
-                  label: const Text('Checkin'),
-                ),
-              ],
-            ),
-          ),
+          child: _LikesAndSharesContainer(place: place),
         ),
         Positioned.fill(
           top: null,
@@ -106,6 +49,76 @@ class AnimatedDetailHeader extends StatelessWidget {
           ),
         )
       ],
+    );
+  }
+}
+
+class _LikesAndSharesContainer extends StatelessWidget {
+  const _LikesAndSharesContainer({
+    required this.place,
+  });
+
+  final TravelPlace place;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 140,
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      decoration: BoxDecoration(
+        color: Colors.blue.shade400,
+        borderRadius: const BorderRadius.vertical(
+          top: Radius.circular(30),
+        ),
+      ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          TextButton.icon(
+            onPressed: () {},
+            style: TextButton.styleFrom(
+              foregroundColor: Colors.black,
+              textStyle: context.subtitle1,
+              shape: const StadiumBorder(),
+            ),
+            icon: const Icon(
+              CupertinoIcons.heart,
+              size: 26,
+            ),
+            label: Text(place.likes.toString()),
+          ),
+          TextButton.icon(
+            onPressed: () {},
+            style: TextButton.styleFrom(
+              foregroundColor: Colors.black,
+              textStyle: context.subtitle1,
+              shape: const StadiumBorder(),
+            ),
+            icon: const Icon(
+              CupertinoIcons.reply,
+              size: 26,
+            ),
+            label: Text(place.shared.toString()),
+          ),
+          const Spacer(),
+          TextButton.icon(
+            onPressed: () {},
+            style: TextButton.styleFrom(
+              foregroundColor: Colors.blue.shade600,
+              backgroundColor: Colors.blue.shade100,
+              textStyle: context.subtitle1,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15.0),
+              ),
+            ),
+            icon: const Icon(
+              Icons.check_circle_outline,
+              size: 26,
+            ),
+            label: const Text('Checkin'),
+          ),
+        ],
+      ),
     );
   }
 }
